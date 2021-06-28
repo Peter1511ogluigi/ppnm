@@ -1,0 +1,15 @@
+set term png
+set width 10
+set xlabel "x"
+set ylabel "$y$"
+set title "ANN plot"
+set output "plots.png"
+f(x)=sin(x)*exp(-x) ;\
+g(x)=cos(x)*exp(-x)-sin(x)*exp(-x) ;\
+h(x) = -1./2*(sin(x)+cos(x))*exp(-x)+1./2*(sin(0)+cos(0))*exp(-0);\
+plot "points.txt" using 1:2 with points color green title "ANN solution"\
+, f(x) with lines color black title "Exact solution function"\
+, "points.txt" using 1:3 with points color red title "ANN derivative"\
+, g(x) with lines color black title "Exact derivative"\
+, "points.txt" using 1:4 with points color purple title "ANN antiderivative"\
+, h(x) with lines color black title "Exact antiderivative"

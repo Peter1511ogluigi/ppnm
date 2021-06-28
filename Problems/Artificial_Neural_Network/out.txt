@@ -1,0 +1,15 @@
+- - - - Excercise A - - - - 
+
+We construct a simple ann with 3 neurons and an activation function of f(x) = sin(x)*exp(-x)  where the acquired parameters become:
+
+i=0, ai, bi, wi = -0.30252 0.984883 1.3441
+i=1, ai, bi, wi = 0.844829 1.10179 0.863563
+i=2, ai, bi, wi = 2.34484 0.973828 0.562334
+
+
+- - - - Exercise B - - - - 
+
+We are to modify such that both the derivative f'(x)= exp(-x)*(sin(x)-cos(x))
+and the antiderivative F(x)=-1/2*exp(-x)(cos(x)+sin(x))+1/2*exp(-x0)(cos(x0)+sin(x0))
+can be approximated after the training. 
+ The solution can be seen on plots.png.
