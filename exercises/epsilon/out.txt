@@ -1,0 +1,27 @@
+- - - Exercise 1.1 - - -
+my max int from 	while loop 	is 		2147483647
+my max int from  	for loop 	is 		2147483647
+my max int from  	do while loop   is 		2147483647
+INT_MAX is given as 					2147483647
+------------
+- - - Exercise 1.2 - - -
+my min int from 	while loop 	is 		-2147483648
+my min int from  	for loop 	is 		-2147483648
+my min int from  	do while loop   is 		-2147483648
+INT_MAX is given as 					-2147483648
+------------
+- - - Exercise 1.3 - - -
+float x for while loop is 0.000000
+double x for while loop is 2.22045e-16
+long double x for while loop is 1.0842e-19
+float e for for loop is 0.000000
+double e for for loop is 2.22045e-16
+long double e for for loop is 1.0842e-19
+
+
+float check 0.000000
+double check 2.22045e-16
+long double check 1.0842e-19
+float y for do while is 0.000000
+double y for do while is 2.22045e-16
+long double y for do while is 1.0842e-19

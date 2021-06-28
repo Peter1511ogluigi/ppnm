@@ -1,0 +1,10 @@
+\
+set terminal pdf;\
+set output "fig-pyxplot.pdf";\
+set key top left;\
+set tics out;\
+set xlabel "x";\
+set ylabel "y";\
+set title "Exponential function";\
+plot \
+ "out.data.txt" using 1:2 with line title "Exp func"\

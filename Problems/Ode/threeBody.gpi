@@ -1,0 +1,9 @@
+  set term png
+  set width 15
+  set xlabel "x"
+  set ylabel "$y$"
+  set title "Three Body Problem"
+  set output "threeBody.png"
+  plot "threeBodyProblem.txt" using 2:3 with lines lw 15 color red title "Body 1"\
+  ,"threeBodyProblem.txt" using 4:5 with lines lw 10 color green title "Body 2"\
+  ,"threeBodyProblem.txt" using 6:7 with lines lw 5 color blue title "Body 3"\

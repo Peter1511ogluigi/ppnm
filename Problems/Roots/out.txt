@@ -1,0 +1,15 @@
+- - - - Part A - - - - 
+
+We search at (x,y) = (-2,8)
+The function is called 2233 times
+The found extremum of Rosenbrock's valley function is at:
+0.999999
+0.999998
+- - - - Part B - - - - 
+
+Lowest root of M(e)=0:
+Chosen rmax = 8
+We start searching at -2
+Lowest found root = -0.500061
+Exact result : -1/2
+The result is plotted on the figure Hydrogen.png

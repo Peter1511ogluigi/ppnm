@@ -1,0 +1,17 @@
+- - - - Exercise A - - - -
+
+We note that our integrator works, since
+
+The integral of the interpolant            from x[0] = 0 to z = 11 is         = -0.971902
+The integral of cos(x) (from math.h)       from        0 to     11 using GSL  = -0.99999
+The integral of cos(x) (from WolframAlpha) from        0 to     11            = -0.99999
+
+this can also be seen from the plot given in lin_spline_plot.png.
+
+- - - - Exercise B - - - - 
+
+the comparison of quadratic spline can be seen on figure quad_spline_plot.png
+
+- - - - Exercise C - - - - 
+
+The cubic spline implementation can be seen on figure cubic_spline_plot.png

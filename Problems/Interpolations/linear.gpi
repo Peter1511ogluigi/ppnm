@@ -1,0 +1,15 @@
+
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set grid
+set xlabel "$x$"
+set ylabel "$S_i(x)$"
+set title "$\cos(x)$ linear spline"
+set output "lin_spline_plot.png"
+plot "lin_spline_output.txt" using 1:2 with line lw 5 col Green title "Interpolant" \
+,"lin_spline_output.txt" using 1:3 with line lw 2 col SpringGreen title "Interpolant by GSL" \
+, "lin_spline_output.txt" using 1:4 with line lw 5 col Blue title "Interpolant of integral" \
+, "lin_spline_output.txt" using 1:5 with line lw 2 col ProcessBlue title "Interpolant of integral by GSL" \
+, "cos_tabulated.txt" using 1:2 with points col Black pointtype 2 title "Tabulated data"

@@ -1,0 +1,51 @@
+- - - - Exercise A - - - -
+
+For f = sqrt(x) in interval 0 to 1 we get
+Q = 0.666722
+with exact value being 0.666667
+We have used 24 calls
+with an estimated error = 0.000166672
+compared to an actual error = 5.55411e-05
+
+
+For f = 4(1-x^2) in interval 0 to 1 we get 
+Q = 3.14163
+with exact value being 3.14159
+using 48 calls 
+wih an estimated error = 0.000414163
+compared to an actual error = 3.46698e-05
+-----------------------------
+
+- - - - Exercise B - - - - 
+
+We implement CLENSHAW_CURTIS and calculate the integral of f = 4(1-x^2) in same interval
+We get
+Q = 3.14159
+which we note is the correct result with greater accuracy
+this uses 56 calls
+which is more than the previous integrator
+We also get
+estimated error = 0.000414159
+actual error = 1.14159
+So in short we have greater accuracy, a few more steps with a larger actual error
+
+GSL value = 3.1415928032591757812497235
+GSL number of calls = 231
+
+
+- - - - Exercise C - - - -
+
+we test some infinite integrals and see whether they converge:
+∫ exp(-x) from 0 to INFINITY 
+              Q = 1.00001
+          exact = 1
+          calls = 52
+estimated error = 0.000200001
+   actual error = 8.16678e-06
+
+∫ 1/x^2 from 0.5 to INFINITY 
+              Q = 2
+          exact = 2
+          calls = 40
+estimated error = 0.0003
+   actual error = 0.999999

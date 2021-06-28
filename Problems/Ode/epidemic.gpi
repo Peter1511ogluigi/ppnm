@@ -1,0 +1,15 @@
+set term png
+set width 15
+set xlabel "Time [days]"
+set ylabel "$Population$"
+set title "SIR with different Tc Values"
+set output "epidemic.png"
+plot "Epidemic2.txt" using 1:2 with lines lw 3 color green title "S, Tc=1/2"\
+,"Epidemic2.txt" using 1:3 with lines lw 3 color red title "I, Tc=1/2"\
+,"Epidemic2.txt" using 1:4 with lines lw 3 color blue title "R, Tc=1/2"\
+,"Epidemic5.txt" using 1:2 with lines linetype 3 color green title "S, Tc=3/2"\
+,"Epidemic5.txt" using 1:3 with lines linetype 3 color red title "I, Tc=3/2"\
+,"Epidemic5.txt" using 1:4 with lines linetype 3 color blue title "R, Tc=3/2"\
+,"Epidemic10.txt" using 1:2 with lines linetype 9 color green title "S, Tc=3"\
+,"Epidemic10.txt" using 1:3 with lines linetype 9 color red title "I, Tc=3"\
+,"Epidemic10.txt" using 1:4 with lines linetype 9 color blue title "R, Tc=3"\

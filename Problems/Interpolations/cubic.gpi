@@ -1,0 +1,17 @@
+
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set grid
+set xlabel "$x$"
+set ylabel "$S_i(x)$"
+set title "$\cos(x)$ cubic spline"
+set output "cubic_spline_plot.png"
+plot "cubic_spline_output.txt" using 1:2 with line lw 5 col Green title "Interpolant" \
+,"cubic_spline_output.txt" using 1:3 with line lw 2 col SpringGreen title "Interpolant by GSL" \
+,"cubic_spline_output.txt" using 1:4 with line lw 5 col Blue title "Interpolant integral" \
+,"cubic_spline_output.txt" using 1:5 with line lw 2 col ProcessBlue title "Interpolant integral by GSL" \
+,"cubic_spline_output.txt" using 1:6 with line lw 5 col red title "Interpolant derivative" \
+,"cubic_spline_output.txt" using 1:7 with line lw 2 col Black title "Interpolant derivative by GSL" \
+, "cos_tabulated.txt" using 1:2 with points col Black pointtype 2 title "Tabulated data"

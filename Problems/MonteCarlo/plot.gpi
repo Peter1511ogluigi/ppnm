@@ -1,0 +1,8 @@
+set term png
+set width 15
+set xlabel "x"
+set ylabel "$y$"
+set title "MC"
+set output "plot.png"
+plot "data.txt" using 1:2 with lines lw 3 color red title "normal"\
+,"data.txt" using 1:3 with lines lw 3 color green title "quasi"\

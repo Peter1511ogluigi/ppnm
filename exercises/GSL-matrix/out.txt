@@ -1,0 +1,8 @@
+1- - - - Exercise A - - - -
+
+I)   When solving the system for x using GSL we get
+    
+   -1.1379   -2.83303   0.851459 
+II)   We check if it is correct by multiplying the given matrix A with our solution x This gives that b is 
+      6.23       5.37       2.29 
+which is the correct result

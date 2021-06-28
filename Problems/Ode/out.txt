@@ -1,0 +1,33 @@
+- - - - Exercise A - - - - 
+
+We solve for u''=-u, with solution cos(x).
+ Therefore we have y(0)=1.
+For this, the start vector is 
+   1.00001 
+-0.000371198 
+
+After 2 pi we get the following vector
+   1.00001 
+-0.000371198 
+
+The analytical answer is
+         0 
+        -1 
+
+This took 338 steps
+
+Now er try to use the SIR model to plot the evolution of corona in Denmark.
+We choose the following parameters N=6e+06 I=3200 R=226000 and investigate the development over 75 days
+The plot is shown on the figure Epidemic.png, which resembles the plot from the SIR wiki page.It took 276030 steps to attain the plot with Tc=1/2
+when comparing different Tc's we see that the larger Tc the more the solution is
+shifted to the right and the number of infected decrease.
+this makes sense since given the definition of Tr/Tc
+
+
+- - - - Exercise B - - - - 
+
+{ti,y(ti)} is stoed in the given path in the driver
+
+- - - - Exercise C - - - - 
+
+The stable three body orbit can be seen solved on threeBody.png

@@ -1,0 +1,15 @@
+- - - - Exercise 1 - - - -
+
+we calculate, gamma(5)=3.17805
+we calculate, bessel(0.5)=0.242268
+we calculate sqrt(-2)=0.000000 + 1.414214 * i
+we calculate exp(i*pi)=-1.000000 + 0.000000 * i
+we calculate exp(i*pi)=0.540302 + 0.841471 * i
+we calculate i^e=-0.428220 + -0.903675 * i
+we calculate i^i=0.207880 + 0.000000 * i
+
+- - - - Exercise 2 - - - - 
+
+significant digits of float       is 0.1111111119389533996582031
+significant digits of double      is 0.1111111111111111049432054
+significant digits of long double is 0.1111111111111111111096053

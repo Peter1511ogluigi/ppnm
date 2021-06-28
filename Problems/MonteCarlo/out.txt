@@ -1,0 +1,18 @@
+- - - - Exercise A - - - - 
+
+we check integral of 1/exp(1-x) from 0 to pi
+numerical result 8.14687 +- i0.00217403
+This is the same as found on wolfram alpha.
+
+We now check the sought after integral from the exercise and get
+numerical result 1.39298 +- i0.00373311
+corresponding to the result given in the exercise.
+
+- - - - Exercise B - - - -
+
+In this exercise we need to 'Implement a multidimensional Monte-Carlo integrator
+ that uses low-discrepancy sequences.'
+and
+Compare the scaling of the error with pseudo-random Monte-Carlo integrator.
+The comparison can be seen on plot.png where it is clear that the error
+becomes smaller with greater number of points.

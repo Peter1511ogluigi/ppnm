@@ -1,0 +1,9 @@
+set term png
+set width 8
+set xlabel "r"
+set ylabel "$\psi_r$"
+set title "Hydrogen Radial Solution"
+set output "Hydrogen.png"
+f(x)=x*exp(-x) ;\
+plot "Hydrogen.txt" using 1:2 with lines color green lw 5 title "Solution"\
+, f(x) with lines color black lw 2 title "Exact solution $r\exp(-r)$"
