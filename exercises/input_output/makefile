@@ -1,25 +1,32 @@
-CFLAGS = -O -Wall -std=gnu11
+CC = gcc
+CFLAGS =-std=gnu99 -O -Wall
+LDFLAGS =
 LDLIBS = -lm
 
-.PHONEY:default
-default:out.opt.txt output.txt error.txt out.file.txt out.cmdline.txt
+default: cmdline stdios loadtext
+	touch out.txt
+	rm out.txt
+	./cmdline $(param1) $(param2) > out.txt
+	cat out.txt
 
-out.cmdline.txt:cmdline input.txt
-	./cmdline $$(cat input.txt) > $@
 
-out.opt.txt: cmdopt
-	./cmdopt -e 0.1 -n 10 > $@
-	./cmdopt -e 0.05 -n 20 >> $@
-	./cmdopt -e 0.01 -n 30 >> $@
 
-output.txt error.txt out.file.txt: input.txt stdio Makefile
-	./stdio < input.txt 1> output.txt 2> error.txt
+cmdline.o: cmdline.c
+	$(CC) $(CFLAGS) -c $< -o $@
+stdios.o: stdios.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-input.txt: Makefile
-	cat /dev/null > $@
-	for x in $$(seq 0 0.5 5); do echo "$$x" >> $@; done
+loadtext.o: loadtext.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-.PHONEY:clean
+cmdline: cmdline.o
+	$(CC) $(LDFLAGS) cmdline.o -o cmdline $(LDLIBS)
+
+stdios: stdios.o
+	$(CC) $(LDFLAGS) stdios.o -o stdios $(LDLIBS)
+
+loadtext: loadtext.o
+	$(CC) $(LDFLAGS) loadtext.o -o loadtext $(LDLIBS)
+
 clean:
-	$(RM) input.txt out* error.txt stdio cmdopt cmdline
-
+	$(RM) *.o out* cmdline stdios
