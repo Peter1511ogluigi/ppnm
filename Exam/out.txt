@@ -1,0 +1,119 @@
+- - - - Exam 2021 - - - - 
+
+In this exercise we are to demonstrate making the Singular Value decomposition
+using a real square matrix A.
+
+
+We start  by defining the matrix A as:
+  0.840  0.394  0.783  0.798  0.912
+
+  0.198  0.335  0.768  0.278  0.554
+
+  0.477  0.629  0.365  0.513  0.952
+
+  0.916  0.636  0.717  0.142  0.607
+
+  0.016  0.243  0.137  0.804  0.157
+
+We now apply the SVD algorithm and attain the following matrices
+
+The Matrix A'->AJ is given as:
+
+  0.178  0.176  0.055  0.123  1.692
+
+ -0.030 -0.213  0.344 -0.050  0.979
+
+  0.013 -0.245 -0.279  0.109  1.333
+
+ -0.150  0.136 -0.052 -0.482  1.368
+
+ -0.151  0.093  0.025  0.643  0.551
+
+
+
+The SVD is given as A=UDV^T, so we have the following matrices.
+
+The matrix U is given as:
+
+  0.637  0.435  0.121  0.150  0.607
+
+ -0.107 -0.526  0.764 -0.061  0.351
+
+  0.045 -0.606 -0.620  0.133  0.478
+
+ -0.537  0.337 -0.115 -0.587  0.491
+
+ -0.541  0.231  0.055  0.782  0.198
+
+Which we note is an orthogonal matrix as demanded, since UU^T is:
+
+  1.000  0.000 -0.000  0.000 -0.000
+
+  0.000  1.000  0.000 -0.000  0.000
+
+ -0.000  0.000  1.000 -0.000  0.000
+
+  0.000 -0.000 -0.000  1.000 -0.000
+
+ -0.000  0.000  0.000 -0.000  1.000
+
+The matrix D is given as
+
+  0.279  0.000  0.000  0.000  0.000
+
+  0.000  0.404  0.000  0.000  0.000
+
+  0.000  0.000  0.450  0.000  0.000
+
+  0.000  0.000  0.000  0.822  0.000
+
+  0.000  0.000  0.000  0.000  2.788
+
+which we note is diagonal with non-negative elements as demanded
+
+matrix V is given as
+
+
+
+  0.123  0.703 -0.328 -0.422  0.452
+
+ -0.821 -0.287 -0.324 -0.074  0.365
+
+ -0.096 -0.029  0.847 -0.236  0.466
+
+ -0.033  0.305  0.042  0.872  0.379
+
+  0.548 -0.574 -0.261 -0.005  0.550
+
+
+
+which we note is orthogonal as demanded since VV^T is:
+
+  1.000 -0.000  0.000 -0.000 -0.000
+
+ -0.000  1.000  0.000 -0.000  0.000
+
+  0.000  0.000  1.000 -0.000  0.000
+
+ -0.000 -0.000 -0.000  1.000 -0.000
+
+ -0.000  0.000  0.000 -0.000  1.000
+
+
+
+At last we can check that UDV^T is given as:
+
+  0.840  0.394  0.783  0.798  0.912
+
+  0.198  0.335  0.768  0.278  0.554
+
+  0.477  0.629  0.365  0.513  0.952
+
+  0.916  0.636  0.717  0.142  0.607
+
+  0.016  0.243  0.137  0.804  0.157
+
+which is clearly the matrix A as was given in the beginning of the exercise.
+Therefore we conclude that the SVD algorithm works.
+On the plot timePlot.png one can see a comparison with our SVD compared to
+the GSL version. As can be clearly seen, our version is far slower.

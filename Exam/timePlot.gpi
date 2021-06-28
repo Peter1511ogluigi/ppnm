@@ -1,0 +1,11 @@
+set terminal png
+set output "$@"
+set key outside
+set tics in
+set xlabel "Matrix dimension"
+set ylabel "time [s]"
+set title "Time"
+set output "timeplot.png"
+
+plot "timeData.txt" using 1:2 with line lw 3 title"My SVD" \
+, "timeData.txt" using 1:3 with line lw 3 title"GSL SVD"\
